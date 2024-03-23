@@ -1,0 +1,85 @@
+.number > div {
+    @include Grid(1fr 1fr 1fr 1fr, 0px);
+  background-color: #ced5f4;
+  padding: 70px 100px 70px 100px;
+  border-radius: 30px;
+  margin-bottom: 100px;
+  .number_item {
+    h1 {
+      font-family: $font_oswald;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 50px;
+      letter-spacing: 0.05em;
+      text-align: center;
+      color: #584ec6;
+      padding-bottom: 14px;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      text-align: center;
+      color: $color_second_ff;
+    }
+  }
+}
+@media (max-width:1032px){
+    .number >div{
+        padding: 50px 30px 50px 30px;
+        .number_item{
+            h1{
+                font-size: 30px;
+            }
+        }
+    }
+}
+@media (max-width:684px){
+    .number >div{
+        @include Grid(1fr 1fr 1fr, 30px);
+        padding: 50px 30px 50px 30px;
+        .number_item{
+            h1{
+                font-size: 30px;
+            }
+        }
+    }
+}
+@media (max-width:560px){
+    .number >div{
+        @include Grid(1fr 1fr, 30px);
+        padding: 50px 30px 50px 30px;
+        .number_item{
+            h1{
+                font-size: 30px;
+            }
+        }
+    }
+}
+@media (max-width:354px){
+    .number >div{
+        padding:20px;
+        .number_item{
+            h1{
+                font-size: 25px;
+                line-height: 35px;
+            }
+        }
+    }
+}
+@media (max-width:334px){
+    .number >div{
+        @include Grid(1fr, 30px);
+        padding:20px;
+        .number_item{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            h1{
+                font-size: 25px;
+                line-height: 35px;
+            }
+        }
+    }
+}

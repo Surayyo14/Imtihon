@@ -1,0 +1,21 @@
+$color_fist_ff5: #ff5c00;
+$color_second_ff: #fff;
+$color_second_544: #544cac;
+$color_last_db: #dbe2ff;
+$color_second_bg: #f5f7ff;
+
+
+
+$font_prompt: 'Prompt', sans-serif;
+$font_oswald:'Oswald', sans-serif;
+
+
+
+%btn_style {
+  background-color: $color_second_544;
+  color: $color_second_ff;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}

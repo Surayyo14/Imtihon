@@ -1,0 +1,91 @@
+.showcase > div {
+  @include Grid(1fr 1fr, 20px);
+  padding-top: 100px;
+  .showcase_title {
+    padding-top: 60px;
+    h1 {
+        font-family: $font_prompt;
+      font-size: 45px;
+      font-weight: 400;
+      line-height: 55px;
+      letter-spacing: 0.07em;
+      color: #353434;
+      padding-bottom: 18px;
+      span {
+        color: $color_fist_ff5;
+      }
+    }
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      color: #a8a8a8;
+      padding-bottom: 30px;
+    }
+    form {
+        @include Flex(center, flex-start, 30px);
+      .now {
+        @extend %btn_style;
+        height: 44px;
+        width: 150px;
+        border-radius: 6px;
+        @include Flex(center, center, 0px);
+      }
+      .demo {
+        border: none;
+        @include Flex(center, flex-start, 10px);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 62px;
+        letter-spacing: 0.02em;
+        color: black;
+        background-color: transparent;
+      }
+    }
+  }
+  .showcase_img {
+    width: 100%;
+  }
+}
+@media (max-width: 958px) {
+  .showcase > div {
+    @include Grid(1fr, 30px);
+    .showcase_title {
+      padding-top: 0;
+    }
+    .showcase_img {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .showcase > div {
+    .showcase_title {
+      h1 {
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 35px;
+      }
+    }
+  }
+}
+@media (max-width: 365px) {
+  .showcase > div {
+    .showcase_title {
+      h1 {
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 35px;
+      }
+      form {
+        flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+      }
+    }
+  }
+}

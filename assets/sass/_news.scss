@@ -1,0 +1,102 @@
+.news > div {
+  margin-bottom: 100px;
+  h1 {
+    font-family: $font_oswald;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: #353434;
+    padding-bottom: 20px;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #a8a8a8;
+    padding-bottom: 45px;
+  }
+
+  .news_card_wrapper {
+    @include Grid(1fr 1fr 1fr, 30px);
+    .news_card {
+      border-radius: 20px;
+      box-shadow: -1px 1px 20px 0px #8080801a;
+      padding: 20px;
+      .compas {
+        width: 60px;
+        height: 60px;
+        background-color: #6156dc;
+        @include Flex(center, center, 0px);
+        border-radius: 7px;
+        margin-bottom: 20px;
+        i {
+          font-size: 30px;
+          color: white;
+        }
+      }
+      .compas2 {
+        width: 60px;
+        height: 60px;
+        background-color: #EF6010;
+        @include Flex(center, center, 0px);
+        border-radius: 7px;
+        margin-bottom: 20px;
+        i {
+          font-size: 30px;
+          color: white;
+        }
+      }
+      .compas3 {
+        width: 60px;
+        height: 60px;
+        background-color: #A73EED;
+        @include Flex(center, center, 0px);
+        border-radius: 7px;
+        margin-bottom: 20px;
+        i {
+          font-size: 30px;
+          color: white;
+        }
+      }
+      h4 {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: #323232;
+        padding-bottom: 15px;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: #8f8f8f;
+      }
+    }
+    .news_card:hover {
+      box-shadow: 0px 12px 30px 0px #47474726;
+      transition: 0.4s;
+    }
+  }
+}
+@media (max-width: 854px) {
+  .news > div {
+    .news_card_wrapper {
+        @include Grid(1fr 1fr, 30px);
+    }
+  }
+}
+@media (max-width: 578px) {
+  .news > div {
+    .news_card_wrapper {
+        @include Grid(1fr, 30px);
+    }
+  }
+}

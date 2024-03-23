@@ -1,0 +1,113 @@
+.pricing > div {
+  margin-bottom: 100px;
+  h1 {
+    font-family: $font_oswald;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: #353434;
+    padding-bottom: 20px;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #959595;
+    padding-bottom: 45px;
+  }
+  .pricing_card_wrapper {
+    @include Grid(1fr 1fr 1fr, 30px);
+    .pricing_card {
+      padding: 60px 0 60px 0;
+      border-radius: 20px;
+      box-shadow: -1px 1px 20px 0px #8080801a;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      h4 {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: #4238af;
+        padding-bottom: 30px;
+      }
+      h3 {
+        font-family: $font_oswald;
+        font-size: 45px;
+        font-weight: 400;
+        line-height: 55px;
+        letter-spacing: 0.07em;
+        text-align: center;
+        color: #353434;
+        padding-bottom: 24px;
+      }
+      h2 {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #8a86b9;
+        padding-bottom: 70px;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #8a86b9;
+      }
+      h6 {
+        @include Flex(center, flex-start, 12px);
+        padding-bottom: 19px;
+        span {
+          i {
+            color: #ff5c00;
+            font-size: 20px;
+          }
+        }
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #a8a8a8;
+      }
+      button {
+        margin-top: 20px;
+        @extend %btn_style;
+        width: 172px;
+        height: 40px;
+        border-radius: 50px;
+      }
+    }
+    .pricing_card:hover {
+      box-shadow: 0px 12px 30px 0px #47474726;
+    }
+  }
+}
+@media (max-width:970px){
+    .pricing > div{
+        .pricing_card_wrapper{
+            @include Grid(1fr 1fr, 30px);
+        }
+    }
+}
+@media (max-width:612px){
+    .pricing > div{
+        h1{
+            font-size: 25px;
+            line-height: 35px;
+        }
+        .pricing_card_wrapper{
+            @include Grid(1fr, 30px);
+        }
+    }
+}

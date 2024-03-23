@@ -1,0 +1,122 @@
+.works > div {
+  @include Flex(center, space-between, 40px);
+  margin-bottom: 100px;
+  .works_title {
+    h5 {
+      color: $color_fist_ff5;
+      font-family: $font_oswald;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 50px;
+      letter-spacing: 0.05em;
+      padding-bottom: 19px;
+    }
+    h1 {
+      font-family: $font_oswald;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 50px;
+      letter-spacing: 0.05em;
+      color: #353434;
+      padding-bottom: 40px;
+    }
+    .work_item2 {
+      background-color: $color_second_bg;
+      @include Flex(flex-start, space-between, 0px);
+      padding: 10px;
+      margin-bottom: 20px;
+      h2 {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 50px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: #323232;
+
+        span {
+          margin-right: 10px;
+          padding: 7.5px;
+          width: 30px;
+          height: 30px;
+          border-radius: 6px;
+          background-color: #e7e9fe;
+          color: #626fff;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 50px;
+          letter-spacing: 0.02em;
+        }
+      }
+      p {
+        padding-left: 30px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: #a8a8a8;
+      }
+    }
+    .work_item {
+      background-color: $color_second_bg;
+      @include Flex(center, space-between, 0px);
+      padding: 10px;
+      margin-bottom: 20px;
+      h2 {
+        color: #323232;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 50px;
+        letter-spacing: 0.02em;
+        text-align: left;
+
+        span {
+          margin-right: 10px;
+          padding: 7.5px;
+          width: 30px;
+          height: 30px;
+          border-radius: 6px;
+          background-color: #f3e0ff;
+          color: #9444c9;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 50px;
+          letter-spacing: 0.02em;
+        }
+      }
+    }
+  }
+  .works_img {
+    video {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 862px) {
+  .works > div {
+    @include Grid(1fr, 0px);
+    .works_img {
+      padding-top: 30px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 442px) {
+  .works > div {
+    .works_title {
+      h1 {
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 35px;
+      }
+    }
+    .works_img {
+      padding-top: 30px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

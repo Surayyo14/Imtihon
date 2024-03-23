@@ -1,0 +1,33 @@
+.brend_logo > div{
+    @include Flex(center, space-between, 0px);
+    padding: 30px 0 70px 0;
+}
+@media (max-width:1038px){
+    .brend_logo > div{
+        @include Grid(repeat(5, 1fr), 30px);
+   
+    }
+}
+@media (max-width:956px){
+    .brend_logo > div{
+        @include Grid(repeat(4, 1fr), 30px);
+    }
+}
+@media (max-width:732px){
+    .brend_logo > div{
+        @include Grid(repeat(3, 1fr), 30px);
+    }
+}
+@media (max-width:524px){
+    .brend_logo > div{
+        @include Grid(repeat(2, 1fr), 30px);
+    }
+}
+@media (max-width:356px){
+    .brend_logo > div{
+        @include Grid(1fr, 30px);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+}
